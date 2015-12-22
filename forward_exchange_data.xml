@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Sequences for forward exchange number. --> 
+        <!--  record id="seq_type_forward_exchange" model="ir.sequence.type">
+            <field name="name">Forward Exchange</field>
+            <field name="code">forward.exchange</field>
+        </record>
+        <record id="seq_account_forward_exchange" model="ir.sequence">
+            <field name="name">Forward Exchange</field>
+            <field name="code">forward.exchange</field>
+            <field name="prefix">FE</field>
+            <field name="padding">5</field>
+        </record -->
+    </data>
+</openerp>

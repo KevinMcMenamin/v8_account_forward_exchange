@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="forward_exchange_tree_view">
+			<field name="name">forward.exchange.tree.view</field>
+			<field name="model">account_forward_exchange.forward_exchange</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Forward Exchange">
+						<field name="name" />
+						<field name="reference" />
+						<field name="contract_enter_date" />
+						<field name="currency_name" />
+						<field name="due_date" />
+						<field name="rate" />
+						<field name="amount_in_foreign_currency" />
+						<field name="amount_committed_in_foreign_currency" />
+						<field name="state" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="forward_exchange_update_tree_view">
+			<field name="name">forward.exchange.update.tree.view</field>
+			<field name="model">account_forward_exchange.forward_exchange_update</field>
+			<field name="arch" type="xml">
+				<tree string="Forward Exchange Updates" editable="top">
+					<field name="name" />
+					<field name="contract_no" />
+					<field name="due_date" />
+					<field name="rate" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="forward_exchange_form_view">
+			<field name="name">forward.exchange.form.view</field>
+			<field name="model">account_forward_exchange.forward_exchange</field>
+			<field name="arch" type="xml">
+				<form string="Forward Exchange" version="7.0" >
+					<group col="4">
+						<field name="name" />
+						<field name="contract_no" />
+						<field name="reference" />
+						<field name="contract_enter_date" />
+						<field name="currency_name" />
+						<field name="due_date" />
+						<field name="rate" />
+						<field name="amount_in_foreign_currency" />
+						<field name="state" />
+						<field name="forward_exchange_updates" nolabel="1" colspan="4"/>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<!-- Action and menu for Forward Exchange -->
+		<record model="ir.actions.act_window" id="forward_exchange_list_action">
+			<field name="name">Forward Exchange</field>
+			<field name="res_model">account_forward_exchange.forward_exchange</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="forward_exchange" name="Forward Exchange" 
+			action="forward_exchange_list_action" parent="account_payment.menu_main_payment" sequence="10"/>
+
+	</data>
+</openerp>

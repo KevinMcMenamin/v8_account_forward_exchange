@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_forward_exchange","account.forward.exchange.forward.exchange","model_account_forward_exchange_forward_exchange","account.group_account_user",1,1,1,1
+"access_forward_exchange_update","account.forward.exchange.forward.exchange.update","model_account_forward_exchange_forward_exchange_update","account.group_account_user",1,1,1,1
+
